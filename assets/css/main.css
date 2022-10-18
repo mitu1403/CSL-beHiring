@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700;900&display=swap");
-body {
+body,
+a {
   font-family: "Montserrat", sans-serif;
   color: #29261e;
   background-color: #fcfcfc;
@@ -285,4 +286,30 @@ header .nav-scroll.sticky .toggle-button i {
   font-size: 16px;
   color: #fffffd;
   background-color: #e7040b;
+}
+.stories-section .tab-content a {
+  color: #29261e;
+  font-size: 16px;
+  font-weight: 300;
+}
+.stories-section .tab-content a:hover .card h4, .stories-section .tab-content a:hover .card p {
+  color: #FC1921;
+}
+.stories-section .tab-content .card {
+  -webkit-box-shadow: 0 0 7px 2px rgba(37, 37, 37, 0.05);
+          box-shadow: 0 0 7px 2px rgba(37, 37, 37, 0.05);
+}
+.stories-section .tab-content .card h4 {
+  font-size: 24px;
+  font-weight: 300;
+}
+.stories-section .tab-content .card p {
+  line-height: 1.5em;
+  height: 8rem;
+}
+.stories-section .tab-content .card .button {
+  padding: 9.5px 14px;
+  color: #e7040b;
+  border-radius: 50%;
+  border-color: #e7040b !important;
 }
