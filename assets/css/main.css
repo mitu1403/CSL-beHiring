@@ -431,6 +431,7 @@ footer {
 .footer__social li a {
   font-size: 16px;
   color: #fffffd;
+<<<<<<< HEAD
 }
 .footer__social li em {
   font-size: 16px;
@@ -650,3 +651,36 @@ footer {
     display: none;
   }
 }/*# sourceMappingURL=main.css.map */
+=======
+  background-color: #e7040b;
+}
+.stories-section .tab-content a {
+  color: #29261e;
+  font-size: 16px;
+  font-weight: 300;
+  -webkit-transition: a;
+  transition: a;
+}
+.stories-section .tab-content a:hover .card h4, .stories-section .tab-content a:hover .card p {
+  color: #FC1921;
+}
+.stories-section .tab-content .card {
+  -webkit-box-shadow: 0 0 7px 2px rgba(37, 37, 37, 0.05);
+          box-shadow: 0 0 7px 2px rgba(37, 37, 37, 0.05);
+}
+.stories-section .tab-content .card h4 {
+  font-size: 24px;
+  font-weight: 300;
+  height: 4rem;
+}
+.stories-section .tab-content .card p {
+  line-height: 1.5em;
+  height: 10rem;
+}
+.stories-section .tab-content .card .button {
+  padding: 9.5px 14px;
+  color: #e7040b;
+  border-radius: 50%;
+  border-color: #e7040b !important;
+}
+>>>>>>> e73ea517512874305eeec924c607f133588e1f83
