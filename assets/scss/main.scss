@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700;900&display=swap");
 @import "variables";
 
-body,
-a {
+body {
   font-family: "Montserrat", sans-serif;
   color: $black-tc;
   background-color: $white-bg;
@@ -265,7 +264,7 @@ header {
       color: $black-tc;
       font-size: 16px;
       font-weight: 300;
-      
+      transition: a;
       &:hover{
         .card{
           h4,p{
@@ -280,10 +279,11 @@ header {
       h4 {
         font-size: 24px;
         font-weight: 300;
+        height: 4rem;
       }
       p {
         line-height: 1.5em;
-        height: 8rem;
+        height: 10rem;
       }
       .button {
         padding: 9.5px 14px;
