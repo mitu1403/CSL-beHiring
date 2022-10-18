@@ -10,7 +10,7 @@ body {
 header {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.01)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.01) 100%);
-  z-index: 900;
+  z-index: 1000;
 }
 header nav {
   -webkit-transition: all 1s ease;
@@ -34,6 +34,18 @@ header .main-nav li a {
 header .main-nav li a:hover {
   color: #FC1921 !important;
 }
+@media screen and (max-width: 1399px) {
+  header .main-nav {
+    background-color: #fcfcfc;
+  }
+  header .main-nav li a {
+    color: #29261e !important;
+    padding-left: 10px;
+  }
+  header .main-nav li a:hover {
+    color: #FC1921 !important;
+  }
+}
 header .toggle-button i {
   color: #fffffd !important;
 }
@@ -43,7 +55,7 @@ header .toggle-button i {
   }
 }
 header .nav-scroll.sticky {
-  background-color: white !important;
+  background-color: #fcfcfc !important;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -54,13 +66,22 @@ header .nav-scroll.sticky .sub-nav li a,
 header .nav-scroll.sticky .main-nav li a {
   color: #3a372e !important;
 }
+header .nav-scroll.sticky .sub-nav li a:hover,
+header .nav-scroll.sticky .main-nav li a:hover {
+  color: #FC1921 !important;
+}
 header .nav-scroll.sticky .toggle-button i {
   color: #FC1921 !important;
 }
 
+.nav-scroll.sticky {
+  -webkit-box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (min-width: 768px) {
   .hero-section {
-    height: 625px;
+    height: 80vh;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -69,5 +90,199 @@ header .nav-scroll.sticky .toggle-button i {
   }
 }
 .hero-section .carousel-card-indicators {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s ease !important;
+  transition: all 1s ease !important;
+}
+.hero-section .carousel-card-indicators [data-bs-target] {
+  width: 80%;
+  height: auto;
+  opacity: 1;
+}
+.hero-section .carousel-card-indicators [data-bs-target] h2 {
+  padding: 2rem;
+  text-indent: 0px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 25px;
+  color: #29261e !important;
+}
+.hero-section .carousel-card-indicators .active {
+  font-size: 1.2rem;
+  -webkit-transition: all 0.9s ease !important;
+  transition: all 0.9s ease !important;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin: 0px 10%;
+  background-color: #29261e;
+  opacity: 1;
+}
+.hero-section .carousel-card-indicators .active h2 {
+  color: white !important;
+}
+@media screen and (max-width: 425px) {
+  .hero-section .carousel-card-indicators {
+    margin-bottom: -7.9rem;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .hero-section .carousel-card-indicators [data-bs-target] {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+  }
+  .hero-section .carousel-card-indicators [data-bs-target] h2 {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.5rem;
+    line-height: 10px;
+    color: #29261e !important;
+  }
+  .hero-section .carousel-card-indicators .active {
+    font-size: 1rem;
+    -webkit-transition: all 0.9s ease !important;
+    transition: all 0.9s ease !important;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    margin: 0px 5%;
+    background-color: #29261e;
+    opacity: 1;
+  }
+  .hero-section .carousel-card-indicators .active h2 {
+    padding: 0.5rem 1rem;
+    color: white !important;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .hero-section .carousel-card-indicators {
+    margin-bottom: 10rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-section .carousel-card-indicators {
+    margin-bottom: 5rem;
+  }
+  .hero-section .carousel-card-indicators [data-bs-target] {
+    width: 50%;
+    height: auto;
+    opacity: 1;
+  }
+  .hero-section .carousel-card-indicators [data-bs-target] h2 {
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 20px;
+    color: #29261e !important;
+  }
+  .hero-section .carousel-card-indicators .active {
+    font-size: 1rem;
+    -webkit-transition: all 0.9s ease !important;
+    transition: all 0.9s ease !important;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    margin: 0px 5%;
+    background-color: #29261e;
+    opacity: 1;
+  }
+  .hero-section .carousel-card-indicators .active h2 {
+    padding: 2rem;
+    color: white !important;
+  }
+}
+
+.search-section form label {
+  color: #FC1921;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+.search-section form input {
+  padding: 1rem 2rem;
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+  font-size: 1.5rem;
+  border-color: transparent;
+}
+.search-section form input::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+.search-section form input::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+.search-section form input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+.search-section form input::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+.search-section form input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+.search-section form button {
+  color: #FC1921;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border: transparent;
+  background-color: transparent;
+}
+.search-section ul li {
+  list-style-type: none;
+}
+.search-section ul li a {
+  text-decoration: none;
+  color: #29261e;
+  font-size: 15px;
+  line-height: 20px;
+}
+.search-section ul li a:hover {
+  color: #FC1921;
+  text-decoration: underline;
+}
+
+.bigger-better-section h2 {
+  font-weight: 300;
+}
+.bigger-better-section p {
+  font-size: 16px;
+  line-height: 1.7em;
+  font-weight: 300;
+}
+.bigger-better-section a {
+  color: #FC1921;
+  font-size: 15px;
+  line-height: 1.7rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.stories-section .tab-button {
+  width: 85%;
+}
+.stories-section .tab-button button {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 10px;
+  border-radius: 30px;
+  line-height: 1.2em;
+  border-color: transparent;
+  background-color: transparent;
+  color: #212121;
+  -webkit-transition: color 250ms, background-color 250ms;
+  transition: color 250ms, background-color 250ms;
+}
+.stories-section .tab-button .active {
+  font-size: 16px;
+  color: #fffffd;
+  background-color: #e7040b;
 }
