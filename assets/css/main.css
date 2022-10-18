@@ -9,7 +9,7 @@ body {
 
 header {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.01) 100%);
-  z-index: 900;
+  z-index: 1000;
 }
 header nav {
   transition: all 1s ease;
@@ -32,6 +32,18 @@ header .main-nav li a {
 header .main-nav li a:hover {
   color: #FC1921 !important;
 }
+@media screen and (max-width: 1399px) {
+  header .main-nav {
+    background-color: #fcfcfc;
+  }
+  header .main-nav li a {
+    color: #29261e !important;
+    padding-left: 10px;
+  }
+  header .main-nav li a:hover {
+    color: #FC1921 !important;
+  }
+}
 header .toggle-button i {
   color: #fffffd !important;
 }
@@ -41,7 +53,7 @@ header .toggle-button i {
   }
 }
 header .nav-scroll.sticky {
-  background-color: white !important;
+  background-color: #fcfcfc !important;
   transition: all 1s ease;
 }
 header .nav-scroll.sticky .display {
@@ -51,8 +63,16 @@ header .nav-scroll.sticky .sub-nav li a,
 header .nav-scroll.sticky .main-nav li a {
   color: #3a372e !important;
 }
+header .nav-scroll.sticky .sub-nav li a:hover,
+header .nav-scroll.sticky .main-nav li a:hover {
+  color: #FC1921 !important;
+}
 header .nav-scroll.sticky .toggle-button i {
   color: #FC1921 !important;
+}
+
+.nav-scroll.sticky {
+  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (min-width: 768px) {

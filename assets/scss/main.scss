@@ -15,7 +15,7 @@ header {
     rgba(0, 0, 0, 0.5) 75%,
     rgba(0, 0, 0, 0.01) 100%
   );
-  z-index: 900;
+  z-index: 1000;
   nav {
     transition: all 1s ease;
   }
@@ -40,6 +40,16 @@ header {
         color: $red-tc !important;
       }
     }
+    @media screen and (max-width: 1399px) {
+      background-color: $white-bg;
+      li a {
+        color: $black-tc !important;
+        padding-left: 10px;
+        &:hover {
+          color: $red-tc !important;
+        }
+      }
+    }
   }
   .toggle-button i {
     color: $white-tc !important;
@@ -50,7 +60,7 @@ header {
     }
   }
   .nav-scroll.sticky {
-    background-color: white !important;
+    background-color: $white-bg !important;
     transition: all 1s ease;
     .display {
       margin-top: -70px;
@@ -59,12 +69,18 @@ header {
     .main-nav {
       li a {
         color: $acadia-tc !important;
+        &:hover {
+          color: $red-tc !important;
+        }
       }
     }
     .toggle-button i {
       color: $red-tc !important;
     }
   }
+}
+.nav-scroll.sticky {
+  box-shadow: 0 5px 5px -2px rgb(0 0 0 / 20%);
 }
 
 .hero-section {
