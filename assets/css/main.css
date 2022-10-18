@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700;900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #29261e;
+  background-color: #fcfcfc;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+header {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.01)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.01) 100%);
+  z-index: 900;
+}
+header nav {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+header .sub-nav li a {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #fffffd !important;
+}
+header .sub-nav li a:hover {
+  color: #FC1921;
+}
+header .main-nav li a {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3em;
+  color: #fffffd !important;
+}
+header .main-nav li a:hover {
+  color: #FC1921 !important;
+}
+header .toggle-button i {
+  color: #fffffd !important;
+}
+@media screen and (max-width: 768px) {
+  header .logo-div {
+    width: 50% !important;
+  }
+}
+header .nav-scroll.sticky {
+  background-color: white !important;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+header .nav-scroll.sticky .display {
+  margin-top: -70px;
+}
+header .nav-scroll.sticky .sub-nav li a,
+header .nav-scroll.sticky .main-nav li a {
+  color: #3a372e !important;
+}
+header .nav-scroll.sticky .toggle-button i {
+  color: #FC1921 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    height: 625px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-section {
+    height: 90vh;
+  }
+}
+.hero-section .carousel-card-indicators {
+  margin-bottom: 10rem;
+}
